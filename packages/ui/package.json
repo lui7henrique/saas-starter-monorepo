@@ -3,10 +3,10 @@
 	"version": "0.0.0",
 	"private": true,
 	"exports": {
-		"./*": "./src/*.tsx"
+		"./globals.css": "./src/globals.css",
+		"./postcss.config": "./postcss.config.mjs"
 	},
 	"scripts": {
-		"generate:component": "turbo gen react-component",
 		"check-types": "tsc --noEmit"
 	},
 	"devDependencies": {
@@ -18,7 +18,10 @@
 		"typescript": "5.8.2"
 	},
 	"dependencies": {
+		"@tailwindcss/postcss": "^4.0.14",
+		"postcss": "^8.5.3",
 		"react": "^19.0.0",
-		"react-dom": "^19.0.0"
+		"react-dom": "^19.0.0",
+		"tailwindcss": "^4.0.14"
 	}
 }
