@@ -1,0 +1,2 @@
+[workspace]
+paths = ["apps/*", "packages/*"] 
