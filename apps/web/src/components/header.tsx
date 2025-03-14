@@ -6,33 +6,44 @@ import {
 	UserButton,
 } from '@clerk/nextjs'
 import { Button } from '@repo/ui/components/button'
+import { Cuboid } from 'lucide-react'
 import { ModeToggle } from './theme-toggle'
+import Link from 'next/link'
 
 export function Header() {
 	return (
 		<header className="border-b p-4">
-			<div className="max-w-6xl mx-auto flex items-center justify-end gap-2">
-				<SignedOut>
-					<SignInButton mode="modal">
-						<Button variant="outline">Sign in</Button>
-					</SignInButton>
+			<div className="max-w-6xl mx-auto flex items-center justify-between gap-2">
+				<div className="flex gap-2 items-center">
+					<Link href="/" className="flex gap-2 items-center">
+						<Cuboid className="size-6" />
+						<h1 className="text-2xl font-medium">Bricks</h1>
+					</Link>
+				</div>
 
-					<SignUpButton mode="modal">
-						<Button>Sign up</Button>
-					</SignUpButton>
-				</SignedOut>
+				<div className="flex gap-2 items-center">
+					<SignedOut>
+						<SignInButton mode="modal">
+							<Button variant="outline">Sign in</Button>
+						</SignInButton>
 
-				<SignedIn>
-					<UserButton
-						appearance={{
-							elements: {
-								avatarBox: '!size-8 border rounded-full',
-							},
-						}}
-					/>
-				</SignedIn>
+						<SignUpButton mode="modal">
+							<Button>Sign up</Button>
+						</SignUpButton>
+					</SignedOut>
 
-				<ModeToggle />
+					<SignedIn>
+						<UserButton
+							appearance={{
+								elements: {
+									avatarBox: '!size-9 border rounded-full',
+								},
+							}}
+						/>
+					</SignedIn>
+
+					<ModeToggle />
+				</div>
 			</div>
 		</header>
 	)

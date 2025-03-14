@@ -16,11 +16,9 @@ export default async function Home() {
 
 	return (
 		<div className="flex flex-col items-center justify-center p-4">
-			<pre className="max-w-xl max-h-[50vh] overflow-auto border rounded-md">
+			<pre className="max-w-6xl max-h-[50vh] overflow-auto border rounded-md">
 				{JSON.stringify(user, null, 2)}
 			</pre>
-
-			<Button>oi</Button>
 		</div>
 	)
 }
