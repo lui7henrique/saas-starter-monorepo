@@ -5,7 +5,8 @@
 	"exports": {
 		"./globals.css": "./src/styles/globals.css",
 		"./postcss.config": "./postcss.config.mjs",
-		"./components/*": "./src/components/*"
+		"./components/*": "./src/components/*.tsx",
+		"./lib/*": "./src/lib/*.ts"
 	},
 	"scripts": {
 		"check-types": "tsc --noEmit"
