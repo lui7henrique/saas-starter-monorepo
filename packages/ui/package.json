@@ -3,8 +3,9 @@
 	"version": "0.0.0",
 	"private": true,
 	"exports": {
-		"./globals.css": "./src/globals.css",
-		"./postcss.config": "./postcss.config.mjs"
+		"./globals.css": "./src/styles/globals.css",
+		"./postcss.config": "./postcss.config.mjs",
+		"./components/*": "./src/components/*"
 	},
 	"scripts": {
 		"check-types": "tsc --noEmit"
